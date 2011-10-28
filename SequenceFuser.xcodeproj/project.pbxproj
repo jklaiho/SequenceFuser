@@ -17,6 +17,7 @@
 		F4B798EE1456BAE10038924D /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F4B798CE1456BAE10038924D /* Cocoa.framework */; };
 		F4B798F61456BAE10038924D /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = F4B798F41456BAE10038924D /* InfoPlist.strings */; };
 		F4B798F91456BAE10038924D /* SequenceFuserTests.m in Sources */ = {isa = PBXBuildFile; fileRef = F4B798F81456BAE10038924D /* SequenceFuserTests.m */; };
+		F4C618CF1459C0FC00887968 /* SourceDirPanelDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = F4C618CE1459C0FC00887968 /* SourceDirPanelDelegate.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -35,20 +36,22 @@
 		F4B798D11456BAE10038924D /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
 		F4B798D21456BAE10038924D /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
 		F4B798D31456BAE10038924D /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
-		F4B798D61456BAE10038924D /* SequenceFuser-Info.plist */ = {isa = PBXFileReference; path = "SequenceFuser-Info.plist"; sourceTree = "<group>"; };
+		F4B798D61456BAE10038924D /* SequenceFuser-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "SequenceFuser-Info.plist"; sourceTree = "<group>"; };
 		F4B798D81456BAE10038924D /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		F4B798DA1456BAE10038924D /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		F4B798DC1456BAE10038924D /* SequenceFuser-Prefix.pch */ = {isa = PBXFileReference; path = "SequenceFuser-Prefix.pch"; sourceTree = "<group>"; };
+		F4B798DC1456BAE10038924D /* SequenceFuser-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "SequenceFuser-Prefix.pch"; sourceTree = "<group>"; };
 		F4B798DE1456BAE10038924D /* en */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; name = en; path = en.lproj/Credits.rtf; sourceTree = "<group>"; };
-		F4B798E01456BAE10038924D /* AppDelegate.h */ = {isa = PBXFileReference; path = AppDelegate.h; sourceTree = "<group>"; };
+		F4B798E01456BAE10038924D /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		F4B798E11456BAE10038924D /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		F4B798E41456BAE10038924D /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/MainMenu.xib; sourceTree = "<group>"; };
 		F4B798EB1456BAE10038924D /* SequenceFuserTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SequenceFuserTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
 		F4B798EC1456BAE10038924D /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
-		F4B798F31456BAE10038924D /* SequenceFuserTests-Info.plist */ = {isa = PBXFileReference; path = "SequenceFuserTests-Info.plist"; sourceTree = "<group>"; };
+		F4B798F31456BAE10038924D /* SequenceFuserTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "SequenceFuserTests-Info.plist"; sourceTree = "<group>"; };
 		F4B798F51456BAE10038924D /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		F4B798F71456BAE10038924D /* SequenceFuserTests.h */ = {isa = PBXFileReference; path = SequenceFuserTests.h; sourceTree = "<group>"; };
+		F4B798F71456BAE10038924D /* SequenceFuserTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SequenceFuserTests.h; sourceTree = "<group>"; };
 		F4B798F81456BAE10038924D /* SequenceFuserTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SequenceFuserTests.m; sourceTree = "<group>"; };
+		F4C618CD1459C0FC00887968 /* SourceDirPanelDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SourceDirPanelDelegate.h; sourceTree = "<group>"; };
+		F4C618CE1459C0FC00887968 /* SourceDirPanelDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SourceDirPanelDelegate.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -118,6 +121,8 @@
 				F4B798E11456BAE10038924D /* AppDelegate.m */,
 				F4B798E31456BAE10038924D /* MainMenu.xib */,
 				F4B798D51456BAE10038924D /* Supporting Files */,
+				F4C618CD1459C0FC00887968 /* SourceDirPanelDelegate.h */,
+				F4C618CE1459C0FC00887968 /* SourceDirPanelDelegate.m */,
 			);
 			path = SequenceFuser;
 			sourceTree = "<group>";
@@ -263,6 +268,7 @@
 			files = (
 				F4B798DB1456BAE10038924D /* main.m in Sources */,
 				F4B798E21456BAE10038924D /* AppDelegate.m in Sources */,
+				F4C618CF1459C0FC00887968 /* SourceDirPanelDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -327,6 +333,7 @@
 				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
 				CLANG_ENABLE_OBJC_ARC = YES;
 				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
@@ -373,6 +380,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "SequenceFuser/SequenceFuser-Prefix.pch";
 				INFOPLIST_FILE = "SequenceFuser/SequenceFuser-Info.plist";
+				MACOSX_DEPLOYMENT_TARGET = 10.7;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -384,6 +392,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "SequenceFuser/SequenceFuser-Prefix.pch";
 				INFOPLIST_FILE = "SequenceFuser/SequenceFuser-Info.plist";
+				MACOSX_DEPLOYMENT_TARGET = 10.7;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -436,6 +445,7 @@
 				F4B798FE1456BAE10038924D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		F4B798FF1456BAE10038924D /* Build configuration list for PBXNativeTarget "SequenceFuserTests" */ = {
 			isa = XCConfigurationList;
@@ -444,6 +454,7 @@
 				F4B799011456BAE10038924D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

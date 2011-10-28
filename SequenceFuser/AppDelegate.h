@@ -10,6 +10,10 @@
 
 @interface AppDelegate : NSObject <NSApplicationDelegate>
 
-@property (assign) IBOutlet NSWindow *window;
+@property (unsafe_unretained) IBOutlet NSWindow *window;
+@property (weak) IBOutlet NSTextField *sourceDirectoryField;
+@property (weak) IBOutlet NSTextField *targetFileField;
+
+- (IBAction)chooseSourceDir:(NSButton *)sender;
 
 @end
