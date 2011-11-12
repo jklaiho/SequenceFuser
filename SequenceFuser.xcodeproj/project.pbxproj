@@ -17,7 +17,8 @@
 		F4B798EE1456BAE10038924D /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F4B798CE1456BAE10038924D /* Cocoa.framework */; };
 		F4B798F61456BAE10038924D /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = F4B798F41456BAE10038924D /* InfoPlist.strings */; };
 		F4B798F91456BAE10038924D /* SequenceFuserTests.m in Sources */ = {isa = PBXBuildFile; fileRef = F4B798F81456BAE10038924D /* SequenceFuserTests.m */; };
-		F4C618CF1459C0FC00887968 /* SourceDirPanelDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = F4C618CE1459C0FC00887968 /* SourceDirPanelDelegate.m */; };
+		F4D2062214600EA400F114A6 /* PathChoiceController.m in Sources */ = {isa = PBXBuildFile; fileRef = F4D2062114600EA400F114A6 /* PathChoiceController.m */; };
+		F4FFE292146C05A100D57E46 /* NSArray+Filtering.m in Sources */ = {isa = PBXBuildFile; fileRef = F4FFE291146C05A100D57E46 /* NSArray+Filtering.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -50,8 +51,10 @@
 		F4B798F51456BAE10038924D /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		F4B798F71456BAE10038924D /* SequenceFuserTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SequenceFuserTests.h; sourceTree = "<group>"; };
 		F4B798F81456BAE10038924D /* SequenceFuserTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SequenceFuserTests.m; sourceTree = "<group>"; };
-		F4C618CD1459C0FC00887968 /* SourceDirPanelDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SourceDirPanelDelegate.h; sourceTree = "<group>"; };
-		F4C618CE1459C0FC00887968 /* SourceDirPanelDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SourceDirPanelDelegate.m; sourceTree = "<group>"; };
+		F4D2062014600EA400F114A6 /* PathChoiceController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PathChoiceController.h; sourceTree = "<group>"; };
+		F4D2062114600EA400F114A6 /* PathChoiceController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PathChoiceController.m; sourceTree = "<group>"; };
+		F4FFE290146C05A100D57E46 /* NSArray+Filtering.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSArray+Filtering.h"; sourceTree = "<group>"; };
+		F4FFE291146C05A100D57E46 /* NSArray+Filtering.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSArray+Filtering.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -117,12 +120,14 @@
 		F4B798D41456BAE10038924D /* SequenceFuser */ = {
 			isa = PBXGroup;
 			children = (
+				F4D2062014600EA400F114A6 /* PathChoiceController.h */,
+				F4D2062114600EA400F114A6 /* PathChoiceController.m */,
 				F4B798E01456BAE10038924D /* AppDelegate.h */,
 				F4B798E11456BAE10038924D /* AppDelegate.m */,
 				F4B798E31456BAE10038924D /* MainMenu.xib */,
 				F4B798D51456BAE10038924D /* Supporting Files */,
-				F4C618CD1459C0FC00887968 /* SourceDirPanelDelegate.h */,
-				F4C618CE1459C0FC00887968 /* SourceDirPanelDelegate.m */,
+				F4FFE290146C05A100D57E46 /* NSArray+Filtering.h */,
+				F4FFE291146C05A100D57E46 /* NSArray+Filtering.m */,
 			);
 			path = SequenceFuser;
 			sourceTree = "<group>";
@@ -268,7 +273,8 @@
 			files = (
 				F4B798DB1456BAE10038924D /* main.m in Sources */,
 				F4B798E21456BAE10038924D /* AppDelegate.m in Sources */,
-				F4C618CF1459C0FC00887968 /* SourceDirPanelDelegate.m in Sources */,
+				F4D2062214600EA400F114A6 /* PathChoiceController.m in Sources */,
+				F4FFE292146C05A100D57E46 /* NSArray+Filtering.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -331,7 +337,8 @@
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
-				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_ARC = NO;
+				CODE_SIGN_IDENTITY = "";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				GCC_C_LANGUAGE_STANDARD = gnu99;
@@ -359,7 +366,8 @@
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
-				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_ARC = NO;
+				CODE_SIGN_IDENTITY = "";
 				COPY_PHASE_STRIP = YES;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				GCC_C_LANGUAGE_STANDARD = gnu99;
@@ -377,6 +385,7 @@
 		F4B798FD1456BAE10038924D /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "SequenceFuser/SequenceFuser-Prefix.pch";
 				INFOPLIST_FILE = "SequenceFuser/SequenceFuser-Info.plist";
@@ -389,6 +398,7 @@
 		F4B798FE1456BAE10038924D /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "SequenceFuser/SequenceFuser-Prefix.pch";
 				INFOPLIST_FILE = "SequenceFuser/SequenceFuser-Info.plist";
