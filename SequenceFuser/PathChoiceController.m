@@ -9,8 +9,6 @@ NSString * const SFPathChoiceErrors = @"SFPathChoiceErrors";
  */
 @interface SourceDirectoryController (private)
 - (BOOL)validateSequenceFilesInArray:(NSArray *)array error:(NSError **)error;
-- (BOOL)validateSequenceFilesAreImages:(NSArray *)array error:(NSError **)error;
-
 - (NSDictionary *)createUserInfoDictionaryWithArray:(NSArray *)objArray;
 @end
 
@@ -40,9 +38,7 @@ NSString * const SFPathChoiceErrors = @"SFPathChoiceErrors";
                                                      error:nil];
     
     if ([self validateSequenceFilesInArray:files error:outError]) {
-        if ([self validateSequenceFilesAreImages:files error:outError]) {
             return YES;
-        }
     }
     return NO;
 }
@@ -140,6 +136,7 @@ NSString * const SFPathChoiceErrors = @"SFPathChoiceErrors";
         }
         return NO;
     }
+    
     // OK, we've got one or more sequences. Thing is, there can only be one
     // sequence in the source directory. Confirm that this is the case by
     // seeing if all the elements of sequenceFiles have the same string prefix
@@ -147,7 +144,7 @@ NSString * const SFPathChoiceErrors = @"SFPathChoiceErrors";
     if ([foundPrefixes count] > 1) {
         if (outError != NULL) {
             NSDictionary *errorDict = [self createUserInfoDictionaryWithArray:
-               [NSArray arrayWithObjects:
+                [NSArray arrayWithObjects:
                     @"Multiple sets of sequentially named files found.",
                     @"The source directory must contain only one set of sequentially named files.",
                     nil]];
@@ -155,23 +152,33 @@ NSString * const SFPathChoiceErrors = @"SFPathChoiceErrors";
         }
         return NO;
     }
-    return YES;
-}
-
-- (BOOL)validateSequenceFilesAreImages:(NSArray *)array error:(NSError **)outError {
-    BOOL validImages = YES;
-    // TODO
-    if (!validImages) {
-        if (outError != NULL) {
-            NSDictionary *errorDict = [self createUserInfoDictionaryWithArray:
-                [NSArray arrayWithObjects:
-                    @"The sequence contains files that are not images.",
-                    @"A sequentially named set of files was found, but it contains files that are not recognized as images.",
-                    nil]];
-            *outError = [NSError errorWithDomain:SFPathChoiceErrors code:kSFNotAnImageSequence userInfo:errorDict];
+    
+    // We verifiably have just one sequence. The UTI information has been cached
+    // into the NSURLs of our filtered array, see that all the files have a
+    // supported UTI.
+    NSSet *supportedUTIs = [NSSet setWithObjects:@"public.png", @"public.jpeg", @"public.tiff", nil];
+    // getResourceValue takes an (id *), so allocate one NSString to hold all
+    // the values returned by the method in the for loop
+    NSMutableString *UTI = [[NSMutableString alloc] init];
+    for (NSURL *file in sequenceFiles) {
+        // Ignore the returned BOOL, run for the UTI-populating side effect
+        [file getResourceValue:&UTI forKey:NSURLTypeIdentifierKey error:nil];
+        
+        if (![supportedUTIs containsObject:UTI]) {
+            if (outError != NULL) {
+                NSDictionary *errorDict = [self createUserInfoDictionaryWithArray:
+                    [NSArray arrayWithObjects:
+                        @"The sequence contains files that are not images.",
+                        @"A sequentially named set of files was found, but it contains files that are not recognized as images.",
+                        nil]];
+                *outError = [NSError errorWithDomain:SFPathChoiceErrors code:kSFNotAnImageSequence userInfo:errorDict];
+            }
+            return NO;
         }
-        return NO;
     }
+    [UTI release];
+    
+    // All OK! The source directory is fine for processing.
     return YES;
 }
 
