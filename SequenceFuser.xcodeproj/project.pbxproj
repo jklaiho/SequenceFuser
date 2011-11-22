@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		F4230F2214751CDC0000D466 /* SFMainWindowController.m in Sources */ = {isa = PBXBuildFile; fileRef = F4230F2014751CDC0000D466 /* SFMainWindowController.m */; };
+		F4230F2314751CDC0000D466 /* SFMainWindowController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F4230F2114751CDC0000D466 /* SFMainWindowController.xib */; };
 		F4B798CF1456BAE10038924D /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F4B798CE1456BAE10038924D /* Cocoa.framework */; };
 		F4B798D91456BAE10038924D /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = F4B798D71456BAE10038924D /* InfoPlist.strings */; };
 		F4B798DB1456BAE10038924D /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = F4B798DA1456BAE10038924D /* main.m */; };
@@ -17,7 +19,11 @@
 		F4B798EE1456BAE10038924D /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F4B798CE1456BAE10038924D /* Cocoa.framework */; };
 		F4B798F61456BAE10038924D /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = F4B798F41456BAE10038924D /* InfoPlist.strings */; };
 		F4B798F91456BAE10038924D /* SequenceFuserTests.m in Sources */ = {isa = PBXBuildFile; fileRef = F4B798F81456BAE10038924D /* SequenceFuserTests.m */; };
-		F4D2062214600EA400F114A6 /* PathChoiceController.m in Sources */ = {isa = PBXBuildFile; fileRef = F4D2062114600EA400F114A6 /* PathChoiceController.m */; };
+		F4C58945147B9EF20019160D /* ProgressBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = F4C58944147B9EF20019160D /* ProgressBarController.m */; };
+		F4E21939147BAC1C00DF2CF2 /* ProgressBarController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F4E21938147BAC1C00DF2CF2 /* ProgressBarController.xib */; };
+		F4E2193D147C15F900DF2CF2 /* SourceDirectoryController.m in Sources */ = {isa = PBXBuildFile; fileRef = F4E2193C147C15F900DF2CF2 /* SourceDirectoryController.m */; };
+		F4E21940147C160900DF2CF2 /* TargetFileController.m in Sources */ = {isa = PBXBuildFile; fileRef = F4E2193F147C160900DF2CF2 /* TargetFileController.m */; };
+		F4E21943147C291700DF2CF2 /* PathChoiceUtilities.m in Sources */ = {isa = PBXBuildFile; fileRef = F4E21942147C291700DF2CF2 /* PathChoiceUtilities.m */; };
 		F4FFE292146C05A100D57E46 /* NSArray+Filtering.m in Sources */ = {isa = PBXBuildFile; fileRef = F4FFE291146C05A100D57E46 /* NSArray+Filtering.m */; };
 /* End PBXBuildFile section */
 
@@ -32,6 +38,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		F4230F1F14751CDC0000D466 /* SFMainWindowController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SFMainWindowController.h; sourceTree = "<group>"; };
+		F4230F2014751CDC0000D466 /* SFMainWindowController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SFMainWindowController.m; sourceTree = "<group>"; };
+		F4230F2114751CDC0000D466 /* SFMainWindowController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SFMainWindowController.xib; sourceTree = "<group>"; };
 		F4B798CA1456BAE10038924D /* SequenceFuser.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SequenceFuser.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F4B798CE1456BAE10038924D /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
 		F4B798D11456BAE10038924D /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
@@ -51,8 +60,15 @@
 		F4B798F51456BAE10038924D /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		F4B798F71456BAE10038924D /* SequenceFuserTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SequenceFuserTests.h; sourceTree = "<group>"; };
 		F4B798F81456BAE10038924D /* SequenceFuserTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SequenceFuserTests.m; sourceTree = "<group>"; };
-		F4D2062014600EA400F114A6 /* PathChoiceController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PathChoiceController.h; sourceTree = "<group>"; };
-		F4D2062114600EA400F114A6 /* PathChoiceController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PathChoiceController.m; sourceTree = "<group>"; };
+		F4C58943147B9EF20019160D /* ProgressBarController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProgressBarController.h; sourceTree = "<group>"; };
+		F4C58944147B9EF20019160D /* ProgressBarController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProgressBarController.m; sourceTree = "<group>"; };
+		F4E21938147BAC1C00DF2CF2 /* ProgressBarController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ProgressBarController.xib; sourceTree = "<group>"; };
+		F4E2193B147C15F900DF2CF2 /* SourceDirectoryController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SourceDirectoryController.h; sourceTree = "<group>"; };
+		F4E2193C147C15F900DF2CF2 /* SourceDirectoryController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SourceDirectoryController.m; sourceTree = "<group>"; };
+		F4E2193E147C160900DF2CF2 /* TargetFileController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TargetFileController.h; sourceTree = "<group>"; };
+		F4E2193F147C160900DF2CF2 /* TargetFileController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TargetFileController.m; sourceTree = "<group>"; };
+		F4E21941147C291700DF2CF2 /* PathChoiceUtilities.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PathChoiceUtilities.h; sourceTree = "<group>"; };
+		F4E21942147C291700DF2CF2 /* PathChoiceUtilities.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PathChoiceUtilities.m; sourceTree = "<group>"; };
 		F4FFE290146C05A100D57E46 /* NSArray+Filtering.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSArray+Filtering.h"; sourceTree = "<group>"; };
 		F4FFE291146C05A100D57E46 /* NSArray+Filtering.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSArray+Filtering.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -120,14 +136,19 @@
 		F4B798D41456BAE10038924D /* SequenceFuser */ = {
 			isa = PBXGroup;
 			children = (
-				F4D2062014600EA400F114A6 /* PathChoiceController.h */,
-				F4D2062114600EA400F114A6 /* PathChoiceController.m */,
 				F4B798E01456BAE10038924D /* AppDelegate.h */,
 				F4B798E11456BAE10038924D /* AppDelegate.m */,
-				F4B798E31456BAE10038924D /* MainMenu.xib */,
+				F4C58943147B9EF20019160D /* ProgressBarController.h */,
+				F4C58944147B9EF20019160D /* ProgressBarController.m */,
+				F4230F1F14751CDC0000D466 /* SFMainWindowController.h */,
+				F4230F2014751CDC0000D466 /* SFMainWindowController.m */,
+				F4E2193B147C15F900DF2CF2 /* SourceDirectoryController.h */,
+				F4E2193C147C15F900DF2CF2 /* SourceDirectoryController.m */,
+				F4E2193E147C160900DF2CF2 /* TargetFileController.h */,
+				F4E2193F147C160900DF2CF2 /* TargetFileController.m */,
 				F4B798D51456BAE10038924D /* Supporting Files */,
-				F4FFE290146C05A100D57E46 /* NSArray+Filtering.h */,
-				F4FFE291146C05A100D57E46 /* NSArray+Filtering.m */,
+				F4E21944147C3A3200DF2CF2 /* User Interfaces */,
+				F4E21945147C3A4E00DF2CF2 /* Utilities */,
 			);
 			path = SequenceFuser;
 			sourceTree = "<group>";
@@ -161,6 +182,27 @@
 				F4B798F41456BAE10038924D /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		F4E21944147C3A3200DF2CF2 /* User Interfaces */ = {
+			isa = PBXGroup;
+			children = (
+				F4B798E31456BAE10038924D /* MainMenu.xib */,
+				F4E21938147BAC1C00DF2CF2 /* ProgressBarController.xib */,
+				F4230F2114751CDC0000D466 /* SFMainWindowController.xib */,
+			);
+			name = "User Interfaces";
+			sourceTree = "<group>";
+		};
+		F4E21945147C3A4E00DF2CF2 /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				F4FFE290146C05A100D57E46 /* NSArray+Filtering.h */,
+				F4FFE291146C05A100D57E46 /* NSArray+Filtering.m */,
+				F4E21941147C291700DF2CF2 /* PathChoiceUtilities.h */,
+				F4E21942147C291700DF2CF2 /* PathChoiceUtilities.m */,
+			);
+			name = Utilities;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -237,6 +279,8 @@
 				F4B798D91456BAE10038924D /* InfoPlist.strings in Resources */,
 				F4B798DF1456BAE10038924D /* Credits.rtf in Resources */,
 				F4B798E51456BAE10038924D /* MainMenu.xib in Resources */,
+				F4230F2314751CDC0000D466 /* SFMainWindowController.xib in Resources */,
+				F4E21939147BAC1C00DF2CF2 /* ProgressBarController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -273,8 +317,12 @@
 			files = (
 				F4B798DB1456BAE10038924D /* main.m in Sources */,
 				F4B798E21456BAE10038924D /* AppDelegate.m in Sources */,
-				F4D2062214600EA400F114A6 /* PathChoiceController.m in Sources */,
 				F4FFE292146C05A100D57E46 /* NSArray+Filtering.m in Sources */,
+				F4230F2214751CDC0000D466 /* SFMainWindowController.m in Sources */,
+				F4C58945147B9EF20019160D /* ProgressBarController.m in Sources */,
+				F4E2193D147C15F900DF2CF2 /* SourceDirectoryController.m in Sources */,
+				F4E21940147C160900DF2CF2 /* TargetFileController.m in Sources */,
+				F4E21943147C291700DF2CF2 /* PathChoiceUtilities.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
